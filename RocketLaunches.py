@@ -11,7 +11,7 @@ st.set_page_config(page_title="Rocket Launches",
                    layout="wide"
 )
 
-path = r"C:\Users\charl\Downloads\UCS-Satellite-Database-1-1-2023.xlsx"
+path = r"C:\Users\charl\OneDrive\Desktop\Pulsar\UCS-Satellite-Database-1-1-2023.xlsx"
 @st.cache_data
 def get_data_from_spreadsheet():
     df = pd.read_excel(path, na_values=['nan', 'NA', ''])
