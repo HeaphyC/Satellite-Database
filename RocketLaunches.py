@@ -13,7 +13,7 @@ st.set_page_config(page_title="Rocket Launches",
                    layout="wide"
 )
 
-url = https://github.com/HeaphyC/Satellite-Database/blob/master/UCS-Satellite-Database-1-1-2023.xlsx
+url = r"https://github.com/HeaphyC/Satellite-Database/blob/master/UCS-Satellite-Database-1-1-2023.xlsx"
 response = requests.get(url)
 # Check if the request was successful
 if response.status_code == 200:
