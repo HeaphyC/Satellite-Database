@@ -168,7 +168,7 @@ st.altair_chart(Power_bar, use_container_width=True)
 Mass_bar = alt.Chart(df_selection).mark_bar().encode(
     alt.X("Launch Mass (kg.)", bin=True),
     y='count()')
-st.altair_chart(Mass_bar, width=0.8)
+st.altair_chart(Mass_bar, use_container_width=True)
 
 ## STYLE ADJUSTMENTS
 
