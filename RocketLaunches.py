@@ -23,7 +23,7 @@ if response.status_code == 200:
 
 @st.cache_data
 def get_data_from_spreadsheet():
-    df = pd.read_excel(BytesIO(excel_content), na_values=['nan', 'NA', ''])
+    df = pd.read_excel(BytesIO(excel_content), engine='openpyxl', na_values=['nan', 'NA', ''])
     df['Power (watts)'] = df['Power (watts)'].astype(str)
     df['Power (watts)'] = df['Power (watts)'].str.replace(',', '')
     df['Power (watts)'] = df['Power (watts)'].apply(lambda x: re.findall(r'\d+', x)[0] if re.findall(r'\d+', x) else x)
